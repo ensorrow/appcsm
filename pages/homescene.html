@@ -11,62 +11,127 @@
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button><!-- 响应式按钮 -->
-          <span class="navbar-brand">APP后台管理</span>
-        </div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button><!-- 响应式按钮 -->
+        <span class="navbar-brand">APP后台管理</span>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <div class="container-fluid mainContainer">
-    	<div class="row">
-    		<sidebar class="col-md-2 col-xs-12 sidebar collapse" id="sidebar">
-    			<ul class="nav nav-sidebar">
-    				<li><a href="#">订单管理</a></li>
-    				<li><a href="#" class="active">首页信息管理</a></li>
-    				<li><a href="#">第一屏管理</a></li>
-    				<li><a href="#">教师信息管理</a></li>
-    				<li><a href="#">发布公告</a></li>
-    			</ul>
-          <a href="#" class="btn btn-primary loginBtn"><span class="glyphicon glyphicon-off"></span> 登出</a>
-    		</sidebar>
-        <main class="col-md-10 col-md-offset-2 mainContainer">
-          <h1 class="page-header">首页信息管理</h1>                  
-          <div class="row">
-            <div class="col-md-12 col-xs-12 container">
-              <div class="innerBox">
-                <h2 class="page-header">轮播图管理</h2>
-                <form class="row">
-                  <div class="col-md-6">
-                    <input id="imgUpload" multiple type="file">
-                    <!-- 文件上传控件 -->
+  <div class="container-fluid mainContainer">
+  	<div class="row">
+  		<sidebar class="col-md-2 col-xs-12 sidebar collapse" id="sidebar">
+  			<ul class="nav nav-sidebar">
+  				<li><a href="../index.html">订单管理</a></li>
+          <li><a href="./homescene.html" class="active">首页信息管理</a></li>
+          <li><a href="./loadPage.html">第一屏管理</a></li>
+          <li><a href="./teacher.html">教师信息管理</a></li>
+          <li><a href="./anno.html">发布公告</a></li>
+  			</ul>
+        <a href="#" class="btn btn-primary loginBtn"><span class="glyphicon glyphicon-off"></span> 登出</a>
+  		</sidebar>
+      <main class="col-md-10 col-md-offset-2 mainContainer">
+        <h1 class="page-header">首页信息管理</h1>                  
+        <div class="row">
+          <div class="col-md-12 col-xs-12 container">
+            <div class="innerBox">
+              <h2 class="page-header">轮播图管理</h2>
+              <form class="row">
+                <div class="col-md-6">
+                  <input id="imgUpload" multiple type="file">
+                  <!-- 文件上传控件 -->
+                </div>
+                <div class="col-md-6">
+                  <div id="textInputWra">
+                    <!-- <div class="form-group">
+                      <label>输入图片对应的url</label>
+                      <input type="url" class="form-control">
+                    </div> -->
                   </div>
-                  <div class="col-md-6">
-                    <div id="textInputWra">
-                      <!-- <div class="form-group">
-                        <label>输入图片对应的url</label>
-                        <input type="url" class="form-control">
-                      </div> -->
-                    </div>
-                    <button class="btn btn-primary disabled" id="subBtn">提交</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="col-md-12 col-xs-12 container">
-              <div class="innerBox">
-                <h2 class="page-header">本地热门机构管理</h2>
-              </div>
+                  <button class="btn btn-primary disabled" id="subBtn">提交</button>
+                </div>
+              </form>
             </div>
           </div>
-        </main>
-    	</div>
+          <div class="col-md-12 col-xs-12 container">
+            <div class="innerBox">
+              <h2 class="page-header">本地热门机构管理</h2>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>机构名称</th>
+                    <th>机构名称</th>
+                    <th>机构名称</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>金老师辅导</td>
+                    <td>马老师辅导</td>
+                    <td>老马辅导</td>
+                    <td class="btnWra"><span class="glyphicon glyphicon-remove"></span></td>
+                  </tr>
+                  <tr>
+                    <td>金老师辅导</td>
+                    <td>马老师辅导</td>
+                    <td>老马辅导</td>
+                    <td class="btnWra"><span class="glyphicon glyphicon-remove"></span></td>
+                  </tr>
+                  <tr>
+                    <td>金老师辅导</td>
+                    <td>马老师辅导</td>
+                    <td>老马辅导</td>
+                    <td class="btnWra"><span class="glyphicon glyphicon-remove"></span></td>
+                  </tr>
+                  <tr>
+                    <td>金老师辅导</td>
+                    <td>马老师辅导</td>
+                    <td>老马辅导</td>
+                    <td class="btnWra"><span class="glyphicon glyphicon-remove"></span></td>
+                  </tr>                    
+                </tbody>                  
+              </table>
+              <div class="fluid-container"><button class="btn btn-success addRow" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus-sign"></span></button></div>
+            </div>
+          </div>
+        </div>
+      </main>
+  	</div>
+  </div>
+  
+  <!-- modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">编辑列信息</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label>输入列1信息</label>
+              <input type="text" name="a" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>输入列2信息</label>
+              <input type="text" name="b" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>输入列3信息</label>
+              <input type="text" name="c" class="form-control">
+            </div>            
+          </form>
+          <button class="btn btn-primary" id="modalConfirm">提交</button>
+        </div>
+      </div>
     </div>
+  </div>
 
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
@@ -74,5 +139,6 @@
   <script type="text/javascript" src="../js/fileinput_locale_zh.js"></script>
 
   <script type="text/javascript" src='../js/myFileInput.js'></script>
+  <script type="text/javascript" src="../js/tableEdit.js"></script>
 </body>
 </html>

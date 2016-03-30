@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>师友APP后台管理</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/appcsm.css">
+  	<link rel="stylesheet" type="text/css" href="../css/fileinput.css">		  
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button><!-- 响应式按钮 -->
+          <span class="navbar-brand">APP后台管理</span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid mainContainer">
+    	<div class="row">
+    		<sidebar class="col-md-2 col-xs-12 sidebar collapse" id="sidebar">
+    			<ul class="nav nav-sidebar">
+					<li><a href="../index.html">订单管理</a></li>
+		          <li><a href="./homescene.html">首页信息管理</a></li>
+		          <li><a href="./loadPage.html" class="active">第一屏管理</a></li>
+		          <li><a href="./teacher.html">教师信息管理</a></li>
+		          <li><a href="./anno.html">发布公告</a></li>
+    			</ul>
+          <a href="#" class="btn btn-primary loginBtn"><span class="glyphicon glyphicon-off"></span> 登出</a>
+    		</sidebar>
+        <main class="col-md-10 col-md-offset-2 mainContainer">
+          <h1 class="page-header">第一屏管理</h1>
+          <input id="imgUpload" type="file">
+          <!-- 文件上传控件 -->
+        </main>
+    	</div>
+    </div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/fileinput.min.js"></script>
+<script type="text/javascript" src="../js/fileinput_locale_zh.js"></script>
+
+<script type="text/javascript" src='../js/myFileInput.js'></script>
+</body>
+</html>

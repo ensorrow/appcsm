@@ -23,32 +23,37 @@ $(document).ready(function() {
     var imgWra = $('.file-preview-thumbnails');
     var subBtn = $('#subBtn');
     var empty = 1;
+    var imgsNum = 0;
+
     function countImgs() {
         var num = 0;
-        num = imgWra.children('div').length+1;
+        num = imgWra.children('div').length;     
+        console.log(num);
         return num;        
     }
-    $('#imgUpload').on('change', function() {
-        var n = countImgs();
-        n ? empty = 0 : empty = 1;
-        buttonControl();
-        console.log(n);
-        tWra.append('<div class="form-group"><label>输入图片'+n+'对应的url</label><input type="url" class="form-control"></div>')
-    });
-    $('#imgUpload').on('filecleared', function() {
-        buttonControl(1);
-        tWra.children('div').remove();
-    });
-    $('.kv-file-remove').on('click', function (){
-        tWra.children('div').last().remove();
-        console.log('hh')
-    });
     function buttonControl(num) {
-        empty = num || empty;
+        var empty = num || empty;
         if(!empty) {
             subBtn.removeClass('disabled');
         } else {
             subBtn.addClass('disabled');
         }
     }
+
+    $('#imgUpload').on('change', function() {
+        imgsNum+=1;
+        buttonControl(false);
+        tWra.append('<div class="form-group"><label>输入图片'+imgsNum+'对应的url</label><input type="url" class="form-control"></div>')
+    });
+    $('#imgUpload').on('filecleared', function() {
+        imgsNum = 0;
+        buttonControl(true);
+        tWra.children('div').remove();
+    });
+    $('.file-preview').bind('click' ,function() {
+        var n = countImgs();
+        if(n!=imgsNum){
+            tWra.children('div').last().remove();
+        }
+    });    
 })
